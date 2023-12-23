@@ -1,0 +1,17 @@
+{% extends 'MyConvertisseur/layout.html' %}
+
+
+{% block content %}
+{{ message  }} - 
+
+
+<form action="{% url 'show-form' %}" method="post">
+{% csrf_token %}
+{{ form_convert }}
+
+
+<input type="submit" />
+</form>
+new amount - {{  new_amount }}
+from {{ unitee1 }} to {{ unitee2 }}
+{% endblock %}
